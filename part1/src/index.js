@@ -5,8 +5,9 @@ import Content from './Content'
 import Total from './Total'
 
 const App = () => {
-	const course = 'Half Stack application development'
-	const parts = [
+	const course = {
+		name: 'Half Stack application development',
+		parts: [
 		{
 			name: 'Fundamentals of React',
 			exercises1: 10,
@@ -20,12 +21,14 @@ const App = () => {
 			exercises3: 14,
 		},
 	]
+	}
+	
 
 	return (
 		<div className='app'>
-			<Header course={course} />
-			<Content parts={parts} />
-			{/* <Total total={part1} /> */}
+			<Header course={course.name} />
+			<Content parts={course.parts} />
+			<Total total={course.parts} />
 		</div>
 	)
 }
