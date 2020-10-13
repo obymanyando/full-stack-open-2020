@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import Header from './Header'
 import Content from './Content'
 import Total from './Total'
+import HelloApp from './HelloApp'
+import CounterApp from './CounterApp'
 
 const App = () => {
 	const course = {
@@ -35,7 +37,9 @@ const App = () => {
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		{/* <App /> */}
+		{/* <HelloApp /> */}
+		<CounterApp />
 	</React.StrictMode>,
 	document.getElementById('root'),
 )
