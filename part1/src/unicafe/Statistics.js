@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Counter = ({ allFeedback }) => {
+const Statistics = ({ allFeedback }) => {
 	
 	const sum = allFeedback.good + allFeedback.neutral + allFeedback.bad
 	const avgSum = allFeedback.good - allFeedback.bad
@@ -17,11 +17,24 @@ const Counter = ({ allFeedback }) => {
 		}
 	return (
 		<div>
-			<h3>All Feedback: {sum} </h3>
-			<h3>Average: {avg.toFixed(2)}</h3>
-			<h3>Positive: {positive.toFixed(2)}% </h3>
+			<table>
+				<thead>
+					<tr>
+						<th>All Feedback</th>
+						<td>{sum}</td>
+					</tr>
+					<tr>
+						<th>Average</th>
+						<td>{avg.toFixed(2)}</td>
+					</tr>
+					<tr>
+						<th>Positive</th>
+						<td>{positive.toFixed(2)}</td>
+					</tr>
+				</thead>
+			</table>
 		</div>
 	)
 }
 
-export default Counter
+export default Statistics
