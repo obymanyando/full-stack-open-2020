@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from './Button'
+import Counter from './Counter'
 import Display from './Display'
 
 const style = {
@@ -13,16 +14,34 @@ const Main = () => {
 		good: 0,
 		neutral: 0,
 		bad: 0,
+		clickCount: 0,
 	})
 
+	const [all, setall] = useState({})
+
 	const handleGoodFeedback = () => {
-		setClicks({ ...clicks, good: clicks.good + 1 })
+		setClicks({
+			...clicks,
+			good: clicks.good + 1,
+			clickCount: clicks.clickCount + 1,
+		})
+		// setall(clicks.clickCount)
 	}
 	const handleNeutralFeedback = () => {
-		setClicks({ ...clicks, neutral: clicks.neutral + 1 })
+		setClicks({
+			...clicks,
+			neutral: clicks.neutral + 1,
+			clickCount: clicks.clickCount + 1,
+		})
+		// setall(clicks.clickCount)
 	}
 	const handleBadFeedback = () => {
-		setClicks({ ...clicks, bad: clicks.bad + 1 })
+		setClicks({
+			...clicks,
+			bad: clicks.bad + 1,
+			clickCount: clicks.clickCount + 1,
+		})
+		// setall(clicks.clickCount)
 	}
 
 	return (
@@ -44,6 +63,7 @@ const Main = () => {
 			</div>
 
 			<Display good={clicks.good} neutral={clicks.neutral} bad={clicks.bad} />
+			<Counter allFeedback={clicks} />
 		</div>
 	)
 }
