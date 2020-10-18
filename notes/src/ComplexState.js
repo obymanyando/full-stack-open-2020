@@ -29,12 +29,6 @@ const ComplexState = () => {
 		})
 	}
 
-	/**
-	 * { ...clicks }  creates a new obj. that has copies of all the properties of the clicks obj.
-	 * we use 'concat' above coz it doesn't mutate existing array, instead returns new copy of the array with the item added to it.
-	 * we don't use 'push' (allClicks.push('L) setAll(allClicks)) coz it would mutate the state directly. So we make a copy first
-	 */
-
 	return (
 		<div>
 			<div>
@@ -52,6 +46,11 @@ const ComplexState = () => {
 export default ComplexState
 
 /**
+ * 
+	 * { ...clicks }  creates a new obj. that has copies of all the properties of the clicks obj.
+	 * we use 'concat' above coz it doesn't mutate existing array, instead returns new copy of the array with the item added to it.
+	 * we don't use 'push' (allClicks.push('L) setAll(allClicks)) coz it would mutate the state directly. So we make a copy first
+
  * When left btn is clicked, the following func is called:
  *  const handleLeftClick = () => {
         const newClicks = {

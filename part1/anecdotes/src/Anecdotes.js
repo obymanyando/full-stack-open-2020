@@ -5,6 +5,7 @@ const Anecdotes = ({ anecdotes }) => {
 	// anecdotes = props.anecdotes[selected]
 	return (
 		<div>
+		
 			
 		</div>
 	)
