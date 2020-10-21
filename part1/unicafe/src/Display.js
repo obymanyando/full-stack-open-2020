@@ -1,19 +1,19 @@
 import React from 'react'
 
 const Display = (props) => {
-	const { good, neutral, bad , text} = props
+	const { good, neutral, bad } = props
 
 	return (
 		<div className='stats'>
 			<h1>STATISTICS</h1>
 			<h3 style={{ color: 'green' }}>
-				{text}: {good}
+				Good: {good}
 			</h3>
 			<h3 style={{ color: 'orange' }}>
-				{text}: {neutral}
+				Neutral: {neutral}
 			</h3>
 			<h3 style={{ color: 'red' }}>
-				{text}: {bad}{' '}
+				Bad: {bad}
 			</h3>
 		</div>
 	)

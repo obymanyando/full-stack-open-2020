@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Button from './Button'
 import Statistics from './Statistics'
 import Display from './Display'
+import './App.css'
 
 const style = {
 	green: { backgroundColor: 'green' },
@@ -17,7 +18,7 @@ const App = () => {
 		clickCount: 0,
 	})
 
-	const [all, setall] = useState({})
+	// const [all, setall] = useState({})
 
 	const handleGoodFeedback = () => {
 		setClicks({
@@ -62,11 +63,9 @@ const App = () => {
 			</div>
 
 			<Display
-				text='Good'
 				good={clicks.good}
-				text='Neutral'
 				neutral={clicks.neutral}
-				text='Bad' bad={clicks.bad}
+				bad={clicks.bad}
 			/>
 			<Statistics allFeedback={clicks} />
 		</div>
